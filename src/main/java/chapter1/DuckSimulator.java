@@ -7,9 +7,12 @@ public class DuckSimulator {
         mallard.performQuack();
         mallard.swim();
 
-        Duck redhead = new RedheadDuck();
-        redhead.display();
-        redhead.performQuack();
-        redhead.swim();
+        System.out.println("-----------------------");
+
+        Duck model = new ModelDuck();
+        model.display();
+        model.performFly();
+        model.setFlyBehavior(new FlyRocketPowered());
+        model.performFly();
     }
 }
