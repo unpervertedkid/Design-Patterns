@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6c175d-28cd-47f5-8628-479f9ebf3beb" name="Changes" comment="Encapsulated flying and quacking behavior which changes. - Encapsulating what changes and programming to interfaces">
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter1/FlyRocketPowered.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter1/ModelDuck.java" afterDir="false" />
+    <list default="true" id="0b6c175d-28cd-47f5-8628-479f9ebf3beb" name="Changes" comment="Added ability to change the flying and quack behavior at run time and added a new flying behavior, FlyRocketPowered">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chapter1/Duck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/DuckSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chapter1/DuckSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/ducks/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/DuckSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/DuckSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/FlyBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/flyingbehaviors/FlyBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/FlyNoWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/flyingbehaviors/FlyNoWay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/FlyRocketPowered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/flyingbehaviors/FlyRocketPowered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/FlyWithWings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/flyingbehaviors/FlyWithWings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/MallardDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/ducks/MallardDuck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/ModelDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/ducks/ModelDuck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/MuteQuack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/quackbehaviors/MuteQuack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/Quack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/quackbehaviors/Quack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/QuackBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/quackbehaviors/QuackBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/RedheadDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/ducks/RedheadDuck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter1/Squeak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/quackbehaviors/Squeak.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +98,11 @@
       </method>
     </configuration>
     <configuration name="DuckSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter1.DuckSimulator" />
+      <option name="MAIN_CLASS_NAME" value="strategy.DuckSimulator" />
       <module name="DesignPatterns" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter1.*" />
+          <option name="PATTERN" value="strategy.flyingbehaviors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,7 +137,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674639559809</updated>
-      <workItem from="1674639559813" duration="1626000" />
+      <workItem from="1674639559813" duration="3130000" />
     </task>
     <task id="LOCAL-00001" summary="Initial SimUDuck app">
       <created>1674640063757</created>
@@ -151,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674640888136</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added ability to change the flying and quack behavior at run time and added a new flying behavior, FlyRocketPowered">
+      <created>1674641581822</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674641581822</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +177,7 @@
     <MESSAGE value="Initial SimUDuck app" />
     <MESSAGE value="Added fly method" />
     <MESSAGE value="Encapsulated flying and quacking behavior which changes. - Encapsulating what changes and programming to interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Encapsulated flying and quacking behavior which changes. - Encapsulating what changes and programming to interfaces" />
+    <MESSAGE value="Added ability to change the flying and quack behavior at run time and added a new flying behavior, FlyRocketPowered" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ability to change the flying and quack behavior at run time and added a new flying behavior, FlyRocketPowered" />
   </component>
 </project>

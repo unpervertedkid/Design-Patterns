@@ -1,4 +1,4 @@
-package chapter1;
+package strategy.flyingbehaviors;
 
 public class FlyRocketPowered implements FlyBehavior {
     public void fly() {

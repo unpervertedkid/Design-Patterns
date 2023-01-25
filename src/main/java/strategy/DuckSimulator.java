@@ -1,4 +1,9 @@
-package chapter1;
+package strategy;
+
+import strategy.ducks.Duck;
+import strategy.ducks.MallardDuck;
+import strategy.ducks.ModelDuck;
+import strategy.flyingbehaviors.FlyRocketPowered;
 
 public class DuckSimulator {
     public static void main(String[] args) {

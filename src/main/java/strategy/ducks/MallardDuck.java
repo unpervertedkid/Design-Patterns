@@ -1,4 +1,7 @@
-package chapter1;
+package strategy.ducks;
+
+import strategy.flyingbehaviors.FlyWithWings;
+import strategy.quackbehaviors.Quack;
 
 public class MallardDuck extends Duck {
     public MallardDuck() {

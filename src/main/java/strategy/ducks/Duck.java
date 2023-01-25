@@ -1,4 +1,7 @@
-package chapter1;
+package strategy.ducks;
+
+import strategy.flyingbehaviors.FlyBehavior;
+import strategy.quackbehaviors.QuackBehavior;
 
 public abstract class Duck {
 
