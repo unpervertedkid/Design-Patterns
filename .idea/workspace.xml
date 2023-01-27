@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6c175d-28cd-47f5-8628-479f9ebf3beb" name="Changes" comment="Code organization" />
+    <list default="true" id="0b6c175d-28cd-47f5-8628-479f9ebf3beb" name="Changes" comment="Initial Scientific Wild a** guess">
+      <change afterPath="$PROJECT_DIR$/src/main/java/observer/DisplayElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/observer/HeatIndexDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/observer/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/observer/WeatherStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/observer/CurrentConditionsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/observer/CurrentConditionsDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/observer/ForecastDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/observer/ForecastDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/observer/StatisticsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/observer/StatisticsDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/observer/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/observer/WeatherData.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,20 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="observer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.WeatherStation">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -95,6 +111,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WeatherStation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="observer.WeatherStation" />
+      <module name="DesignPatterns" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="observer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Design Patterns" />
       <method v="2">
@@ -110,6 +139,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WeatherStation" />
         <item itemvalue="Application.DuckSimulator" />
       </list>
     </recent_temporary>
@@ -123,6 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674639559809</updated>
       <workItem from="1674639559813" duration="3459000" />
+      <workItem from="1674811382041" duration="5765000" />
     </task>
     <task id="LOCAL-00001" summary="Initial SimUDuck app">
       <created>1674640063757</created>
@@ -159,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674642771275</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Initial Scientific Wild a** guess">
+      <created>1674812707804</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674812707804</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +209,7 @@
     <MESSAGE value="Encapsulated flying and quacking behavior which changes. - Encapsulating what changes and programming to interfaces" />
     <MESSAGE value="Added ability to change the flying and quack behavior at run time and added a new flying behavior, FlyRocketPowered" />
     <MESSAGE value="Code organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code organization" />
+    <MESSAGE value="Initial Scientific Wild a** guess" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Scientific Wild a** guess" />
   </component>
 </project>

@@ -1,12 +1,16 @@
 package observer;
 
-public class WeatherData {
+import java.util.ArrayList;
+
+public class WeatherData implements Subject{
     private float temperature;
     private float humidity;
     private float pressure;
-    CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay();
-    StatisticsDisplay statisticsDisplay = new StatisticsDisplay();
-    ForecastDisplay forecastDisplay = new ForecastDisplay();
+    public ArrayList<Observer> observers;
+
+    public WeatherData() {
+        this.observers = new ArrayList<>();
+    }
 
     public float getTemperature() {
         return temperature;
@@ -21,13 +25,29 @@ public class WeatherData {
     }
 
     public void measurementsChanged(){
-        float temperature = getTemperature();
-        float humidity = getHumidity();
-        float pressure = getPressure();
+        notifyObservers();
+    }
 
+    @Override
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
 
-        currentConditionsDisplay.update(temperature,humidity,pressure);
-        statisticsDisplay.update(temperature,humidity,pressure);
-        forecastDisplay.update(temperature,humidity,pressure);
+    @Override
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        observers.forEach(observer -> observer.update(temperature,humidity,pressure));
+    }
+
+    public void setMeasurements(float temperature,float humidity,float pressure){
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+
+        notifyObservers();
     }
 }

@@ -1,17 +1,31 @@
 package observer;
 
-public class ForecastDisplay {
-    private float temperature;
-    private float humidity;
-    private float pressure;
+public class ForecastDisplay implements DisplayElement,Observer{
 
-    public void update(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.pressure = pressure;
+    private float currentPressure;
+    private float lastPressure;
+    private Subject weatherData;
+
+    public ForecastDisplay(Subject weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
     }
 
-    public void display(){
-        // TODO: Add display implemantation
+    @Override
+    public void display() {
+        System.out.print("Current forecast:");
+        if (currentPressure >  lastPressure){
+            System.out.println("Improving weather on the way!");
+        } else if (currentPressure == lastPressure) {
+            System.out.println("More of the same.");
+        }else {
+            System.out.println("Watch out for cooler, rainy weather");
+        }
+    }
+
+    @Override
+    public void update(float temperature, float humidity, float pressure) {
+        lastPressure = currentPressure;
+        currentPressure = pressure;
     }
 }
