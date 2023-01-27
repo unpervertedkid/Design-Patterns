@@ -1,4 +1,7 @@
-package observer;
+package observer.listeners;
+
+import observer.listeners.displayelements.DisplayElement;
+import observer.subjects.Subject;
 
 public class ForecastDisplay implements DisplayElement,Observer{
 

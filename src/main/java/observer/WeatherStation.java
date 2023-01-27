@@ -1,5 +1,10 @@
 package observer;
 
+import observer.listeners.CurrentConditionsDisplay;
+import observer.listeners.ForecastDisplay;
+import observer.listeners.StatisticsDisplay;
+import observer.subjects.WeatherData;
+
 public class WeatherStation {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();

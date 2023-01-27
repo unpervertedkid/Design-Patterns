@@ -1,6 +1,9 @@
-package observer;
+package observer.listeners;
 
-public class StatisticsDisplay implements Observer,DisplayElement{
+import observer.listeners.displayelements.DisplayElement;
+import observer.subjects.Subject;
+
+public class StatisticsDisplay implements Observer, DisplayElement {
 
     private float averageTemperature = Float.MIN_VALUE;
     private float averageHumidity = Float.MIN_VALUE;

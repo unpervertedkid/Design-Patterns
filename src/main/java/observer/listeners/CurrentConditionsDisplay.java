@@ -1,4 +1,7 @@
-package observer;
+package observer.listeners;
+
+import observer.listeners.displayelements.DisplayElement;
+import observer.subjects.Subject;
 
 public class CurrentConditionsDisplay implements DisplayElement,Observer{
     private float temperature;

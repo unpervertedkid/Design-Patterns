@@ -1,6 +1,9 @@
-package observer;
+package observer.listeners;
 
-public class HeatIndexDisplay implements Observer,DisplayElement{
+import observer.listeners.displayelements.DisplayElement;
+import observer.subjects.Subject;
+
+public class HeatIndexDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
     private Subject weatherData;
