@@ -2,15 +2,12 @@ package observer;
 
 public class StatisticsDisplay implements Observer,DisplayElement{
 
-    private float averageTemperature;
-    private float averageHumidity;
-    private float averagePressure;
+    private float averageTemperature = Float.MIN_VALUE;
+    private float averageHumidity = Float.MIN_VALUE;
+    private float averagePressure = Float.MIN_VALUE;
     private Subject weatherData;
 
     public StatisticsDisplay(Subject weatherData) {
-        this.averageTemperature = 0;
-        this.averageHumidity = 0;
-        this.averagePressure = 0;
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
@@ -29,9 +26,10 @@ public class StatisticsDisplay implements Observer,DisplayElement{
     }
 
     private void updateAverages(float temperature, float humidity,float pressure){
-        this.averageTemperature = (averageTemperature + temperature) / 2;
-        this.averageHumidity = (averageHumidity + humidity) / 2;
-        this.averagePressure = (averagePressure + pressure) / 2;
+
+        this.averageTemperature = averageTemperature == Float.MIN_VALUE ? temperature : (averageTemperature + temperature) / 2;
+        this.averageHumidity = averageHumidity == Float.MIN_VALUE ? humidity : (averageHumidity + humidity) / 2;
+        this.averagePressure = averagePressure == Float.MIN_VALUE ? pressure : (averagePressure + pressure) / 2;
 
         display();
     }
