@@ -6,7 +6,7 @@ public class Espresso extends Beverage{
         description = "Espresso Coffee";
     }
     @Override
-    double cost() {
-        return 0;
+    public double cost() {
+        return super.cost() + 1.99;
     }
 }
