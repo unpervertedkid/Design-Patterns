@@ -1,4 +1,4 @@
-package decorator;
+package decorator.beverages;
 
 public class DarkRoast extends Beverage {
     private String description;
@@ -8,6 +8,6 @@ public class DarkRoast extends Beverage {
 
     @Override
     public double cost() {
-        return super.cost() + 0.99;
+        return 0.99;
     }
 }

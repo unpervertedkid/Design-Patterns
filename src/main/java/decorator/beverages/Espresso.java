@@ -1,4 +1,4 @@
-package decorator;
+package decorator.beverages;
 
 public class Espresso extends Beverage{
     private String description;
@@ -7,6 +7,6 @@ public class Espresso extends Beverage{
     }
     @Override
     public double cost() {
-        return super.cost() + 1.99;
+        return 1.99;
     }
 }
